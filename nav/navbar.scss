@@ -1,0 +1,53 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.Navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    box-shadow: 5px 5px 10px 1px rgba(128, 128, 128, 0.344);
+    border-radius: 30px;
+    width: fit-content;
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    z-index: 999;
+    ul{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        li{
+            list-style: none;
+            padding: 0px 5px;
+            cursor: pointer;
+            transition: all 0.3s;
+            color: #5B6471;
+            &:hover{
+                color: #05966b;
+            }
+        }
+    }
+
+    .right{
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        gap: 5px;
+        margin: auto;
+        position: relative;
+        width: 100px;
+    }
+
+    span{
+        position: absolute;
+        right: 107px;
+        width: 2px;
+        height: 30px;
+        background-color: #5b647181;
+    }
+}

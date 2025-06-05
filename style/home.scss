@@ -1,0 +1,343 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.home {
+  background-color: rgba(127, 255, 212, 0.053);
+  width: 100%;
+  padding: 50px 0px;
+  padding-top: 100px;
+
+  .in {
+    max-width: 1150px;
+    margin: 0 auto;
+    display: flex;
+    // display: grid;
+    // grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    padding: 0 30px;
+
+    .left {
+      display: grid;
+      gap: 30px;
+
+      .openWork {
+        display: flex;
+        align-items: center;
+        gap: 7px;
+        width: fit-content;
+        padding: 5px 15px;
+        background-color: #d1fae5;
+        border-radius: 20px;
+
+        span {
+          width: 7px;
+          height: 7px;
+          background-color: #05966b;
+          border-radius: 50%;
+        }
+
+        p {
+          font-size: 16px;
+          font-weight: 500;
+          color: #087b59;
+        }
+      }
+
+      .name {
+        font-size: 60px;
+        font-weight: 700;
+        line-height: 1.2;
+
+        span {
+          color: #05966b;
+        }
+
+        .two {
+          color: #374151;
+        }
+      }
+
+      .title {
+        font-size: 20px;
+        color: #505b68;
+        line-height: 1.5;
+      }
+
+      .cv {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+      }
+
+      .socialPlace {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 30px;
+        width: fit-content;
+        .btns {
+          display: flex;
+          gap: 15px;
+        }
+
+        .place {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+
+          h1 {
+            color: #505b68;
+            font-weight: 400;
+            font-size: 18px;
+          }
+        }
+      }
+    }
+
+    .right {
+      display: grid;
+      justify-content: center;
+      align-items: center;
+      grid-gap: 30px;
+      width: 100%;
+      background-color: white;
+      border-radius: 30px;
+      box-shadow: 0px 0px 30px 1px rgba(128, 128, 128, 0.2);
+      padding: 20px;
+      position: relative;
+
+      .animation{
+        width: 80px;
+        height: 80px;
+        background-color: #fbf0a0af;
+        border-radius: 20px;
+        position: absolute;
+        top: -10px;
+        left: -20px;
+        animation: move 2s infinite;
+      }
+
+      .animation2{
+        width: 80px;
+        height: 80px;
+        background-color: #ead5e5be;
+        border-radius: 20px;
+        position: absolute;
+        bottom: -10px;
+        right: -20px;
+        animation: moveTwo 2s infinite;
+      }
+
+      .selfi{
+        margin: auto;
+        img{
+            width: 120px;
+            border-radius: 20px;
+        }
+      }
+
+      .job{
+        text-align: center;
+        display: grid;
+        grid-gap: 10px;
+        h1{
+            font-size: 22px;
+        }
+      }
+
+      .info{
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        text-align: center;
+        gap: 100px;
+        h1{
+            color: #05966b;
+        }
+        p{
+            color: #505b68;
+        }
+      }
+
+      .btn1{
+        width: fit-content;
+        margin: auto;
+      }
+    }
+  }
+}
+
+
+@keyframes move{
+    0%{top: -10px;}
+    50%{top: -30px;border-radius: 50%;}
+    100%{top: -10px;}
+}
+
+@keyframes moveTwo{
+    0%{bottom: -20px;}
+    50%{bottom: -20px;border-radius: 50%;}
+    100%{bottom: -20px;}
+}
+
+@media(max-width:952px){
+    .home{
+        .in{
+            .right{
+                .info{
+                    gap: 70px;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:862px){
+    .home{
+        .in{
+            display: flex;
+            flex-wrap: wrap;
+            text-align: center;
+            .left{
+                .cv{
+                    margin: auto;
+                }
+                .socialPlace{
+                    margin: auto;
+                }
+            }
+            .right{
+                .job{
+                    h1{
+                        font-size: 25px;
+                    }
+                }
+                .info{
+                    gap: 100px;
+                }
+            }
+        }
+    }
+}
+
+
+@media(max-width:467px){
+    .home{
+        .in{
+            .left{
+                .name{
+                    font-size: 45px;
+                }
+                .cv{
+                    display: flex;
+                    flex-wrap: wrap;
+                    width: 100%;
+                    button{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        padding: 14px 30px;
+                        width: 100%;
+                    }
+                    .btn1{
+                        padding: 16px 30px;
+                    }
+                }
+            }
+            .right{
+                .job{
+                    h1{
+                        font-size: 25px;
+                    }
+                }
+                .info{
+                    gap: 60px;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:393px){
+    .home{
+        .in{
+            .left{
+                .socialPlace{
+                    .place{
+                        h1{
+                            font-size: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:467px){
+    .home{
+        .in{
+            .right{
+                .job{
+                    h1{
+                        font-size: 25px;
+                    }
+                }
+                .info{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    gap: 20px;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:361px){
+    .home{
+        .in{
+            .left{
+                .name{
+                    font-size: 40px;
+                }
+                .title{
+                    font-size: 18px;
+                }
+                .socialPlace{
+                    .place{
+                        h1{
+                            font-size: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:361px){
+    .home{
+        .in{
+            .left{
+                .name{
+                    font-size: 37px;
+                }
+                .title{
+                    font-size: 18px;
+                }
+                .socialPlace{
+                    .place{
+                        h1{
+                            font-size: 8px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

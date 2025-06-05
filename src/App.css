@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+  position: relative;
+}
+
+.btn1 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 30px;
+  cursor: pointer;
+  background: linear-gradient(90deg, rgb(5, 149, 109) 0%, rgb(7, 145, 172) 100%);
+  border: none;
+  border-radius: 15px;
+  color: white;
+  transition: all 0.5s;
+}
+.btn1 img {
+  width: 25px;
+}
+.btn1 .homeRightImg {
+  width: 25px;
+  filter: brightness(0) invert(1);
+}
+.btn1:hover {
+  transform: scale(0.9);
+  background: linear-gradient(90deg, rgba(5, 149, 108, 0.801) 0%, rgba(7, 145, 172, 0.626) 100%);
+}
+
+.btn2 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 30px;
+  cursor: pointer;
+  background-color: transparent;
+  border: 2px solid #059669;
+  border-radius: 15px;
+  color: #059669;
+  transition: all 0.5s;
+}
+.btn2 img {
+  width: 30px;
+  transition: filter 0.5s ease;
+}
+.btn2:hover {
+  color: white;
+  background-color: #059669;
+}
+.btn2:hover img {
+  filter: brightness(0) invert(1);
+}
+
+.socialBtn {
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 6px 5px 10px 0px rgba(128, 128, 128, 0.242);
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.socialBtn img {
+  width: 22px;
+  transition: filter 0.5s ease;
+}
+.socialBtn:hover {
+  transform: scale(1.05);
+  box-shadow: 6px 5px 10px 0px rgba(128, 128, 128, 0.473);
+}
+.socialBtn:hover img {
+  filter: brightness(0) saturate(100%) invert(38%) sepia(63%) saturate(636%) hue-rotate(118deg);
+}
+
+.darkMode {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}
+.darkMode img {
+  width: 15px;
+}
+
+.language {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  color: #5B6471;
+}
+
+.continier {
+  max-width: 100%;
+  margin: auto;
+}/*# sourceMappingURL=App.css.map */
