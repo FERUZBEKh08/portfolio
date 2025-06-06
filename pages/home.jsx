@@ -23,7 +23,7 @@ export default function home() {
           </article>
           <h1 className="name">
             Salom, men <span>Frontend</span>
-            <span className="two">Dasturchiman</span>
+            <span className="two"> Dasturchiman</span>
           </h1>
 
           <p className="title">

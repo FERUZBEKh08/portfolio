@@ -46,7 +46,6 @@
 .home .in .left .name {
   font-size: 60px;
   font-weight: 700;
-  line-height: 1.2;
 }
 .home .in .left .name span {
   color: #05966b;
@@ -138,7 +137,7 @@
   align-items: center;
   flex-wrap: wrap;
   text-align: center;
-  gap: 100px;
+  gap: 50px;
 }
 .home .in .right .info h1 {
   color: #05966b;
@@ -174,6 +173,11 @@
   }
   100% {
     bottom: -20px;
+  }
+}
+@media (max-width: 1108px) {
+  .home .in .left .name {
+    font-size: 50px;
   }
 }
 @media (max-width: 952px) {
