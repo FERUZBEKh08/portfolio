@@ -1,0 +1,52 @@
+{
+  "skills": [
+    {
+      "name": "React",
+      "category": "Frontend",
+      "percentage": 95,
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+    },
+    {
+      "name": "JavaScript",
+      "category": "Language",
+      "percentage": 96,
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+    },
+    {
+      "name": "HTML",
+      "category": "Frontend",
+      "percentage": 90,
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+    },
+    {
+      "name": "CSS",
+      "category": "Styling",
+      "percentage": 90,
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+    },
+    {
+      "name": "Sass",
+      "category": "Styling",
+      "percentage": 85,
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg"
+    },
+    {
+      "name": "SCSS",
+      "category": "Styling",
+      "percentage": 85,
+      "icon": "https://cdn.simpleicons.org/sass"
+    },
+    {
+      "name": "Git",
+      "category": "Tool",
+      "percentage": 90,
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+    },
+    {
+      "name": "GitHub",
+      "category": "Tool",
+      "percentage": 92,
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+    }
+  ]
+}
