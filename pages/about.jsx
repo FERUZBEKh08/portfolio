@@ -5,18 +5,37 @@ import privateInfo from "../photos & icons/profile.png";
 import exp_1 from "../photos & icons/expertise.png";
 // import goals from "../photos & icons/target.png";
 
-
-//sherif
-
-
 export default function About() {
   const [skills, setSkills] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3000/skills")
-      .then((res) => res.json())
-      .then((data) => setSkills(data))
-      .catch((err) => console.error("Xatolik:", err));
+    fetch(
+      "https://qjeynacbxvelfzuhxqtk.supabase.co/storage/v1/object/public/api/db.json"
+    )
+      .then((res) => {
+        if (!res.ok) throw new Error("Network response was not ok");
+        return res.json();
+      })
+      .then((data) => {
+        console.log("API dan kelayotgan data:", data);
+
+        // data.skills mavjud va array bo'lsa setSkills(data.skills)
+        if (data.skills && Array.isArray(data.skills)) {
+          setSkills(data.skills);
+        } 
+        // Agar data o'zi array bo'lsa to'g'ridan-to'g'ri setSkills(data)
+        else if (Array.isArray(data)) {
+          setSkills(data);
+        } 
+        else {
+          console.error("Skills ma'lumotlari topilmadi yoki format noto'g'ri");
+          setSkills([]); // bo'sh massiv beramiz
+        }
+      })
+      .catch((err) => {
+        console.error("Xatolik:", err);
+        setSkills([]); // xato bo'lsa ham bo'sh massiv
+      });
   }, []);
 
   return (
@@ -86,16 +105,20 @@ export default function About() {
           </div>
 
           <div className="right">
-            {skills.map((skill) => (
-              <div key={skill.name} className="skill-box">
-                <div className="top">
-                  <span  className="knowledge">
-                      <img src={skill.icon} alt="" />
-                  </span>
+            {Array.isArray(skills) && skills.length > 0 ? (
+              skills.map((skill) => (
+                <div key={skill.name} className="skill-box">
+                  <div className="top">
+                    <span className="knowledge">
+                      <img src={skill.icon} alt={skill.name} />
+                    </span>
+                  </div>
+                  {/* <p className="nameThis">{skill.name}</p> */}
                 </div>
-                {/* <p className="nameThis">{skill.name}</p> */}
-              </div>
-            ))}
+              ))
+            ) : (
+              <p>Malumot yuklanmoqda yoki malumot topilmadi...</p>
+            )}
           </div>
         </div>
       </div>
